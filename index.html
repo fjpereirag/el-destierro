@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="es" data-variant="destierro" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>El destierro y la vuelta · De Jerusalén a Babilonia</title>
+<meta name="description" content="Un itinerario de fe en doce etapas: la caída de Jerusalén, los ríos de Babilonia, Ezequiel y los huesos secos, Ciro, y el regreso con Esdras y Nehemías. El destierro como purificación y esperanza.">
+<meta name="theme-color" content="#F4EEE2">
+<meta property="og:type" content="website">
+<meta property="og:title" content="El destierro y la vuelta · De Jerusalén a Babilonia">
+<meta property="og:description" content="«¿Cómo cantar un cántico del Señor en tierra extranjera?» Doce etapas del destierro y la vuelta, con la Escritura y una pregunta para la oración.">
+<meta property="og:image" content="og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<link rel="modulepreload" href="js/three.module.min.js">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#prologo">Saltar al contenido</a>
+
+<!-- Escena 3D fija (respaldo SVG si no hay WebGL) -->
+<div class="stage" aria-hidden="true">
+  <canvas id="mapa3d"></canvas>
+  <div class="stage__fallback"><svg viewBox="0 0 200 200" class="mapa-svg"><use href="#mapa"/></svg></div>
+  <div class="stage__veil"></div>
+  <div class="labels" id="labels"></div>
+</div>
+
+<header class="top">
+  <a class="top__brand" href="#inicio">El destierro y la vuelta</a>
+  <button class="top__btn" type="button" aria-expanded="false" aria-controls="menu-etapas"><span class="top__cur" id="etapa-actual">Etapas</span><i aria-hidden="true"></i></button>
+  <nav class="top__nav" id="menu-etapas" aria-label="Etapas" hidden>
+    <p class="top__grp">I · El destierro</p>
+    <ol>
+        <li><a href="#etapa-1" data-dot="1"><span class="rn">I</span><span class="nm">La caída</span></a></li>
+        <li><a href="#etapa-2" data-dot="2"><span class="rn">II</span><span class="nm">La deportación</span></a></li>
+        <li><a href="#etapa-3" data-dot="3"><span class="rn">III</span><span class="nm">Los ríos de Babilonia</span></a></li>
+    </ol>
+    <p class="top__grp">II · En Babilonia</p>
+    <ol>
+        <li><a href="#etapa-4" data-dot="4"><span class="rn">IV</span><span class="nm">Ezequiel</span></a></li>
+        <li><a href="#etapa-5" data-dot="5"><span class="rn">V</span><span class="nm">La carta</span></a></li>
+        <li><a href="#etapa-6" data-dot="6"><span class="rn">VI</span><span class="nm">Los huesos secos</span></a></li>
+        <li><a href="#etapa-7" data-dot="7"><span class="rn">VII</span><span class="nm">La Palabra</span></a></li>
+        <li><a href="#etapa-8" data-dot="8"><span class="rn">VIII</span><span class="nm">Ciro</span></a></li>
+    </ol>
+    <p class="top__grp">III · La vuelta</p>
+    <ol>
+        <li><a href="#etapa-9" data-dot="9"><span class="rn">IX</span><span class="nm">Consolad</span></a></li>
+        <li><a href="#etapa-10" data-dot="10"><span class="rn">X</span><span class="nm">El regreso</span></a></li>
+        <li><a href="#etapa-11" data-dot="11"><span class="rn">XI</span><span class="nm">Esdras</span></a></li>
+        <li><a href="#etapa-12" data-dot="12"><span class="rn">XII</span><span class="nm">Nehemías</span></a></li>
+    </ol>
+  </nav>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero" id="inicio" data-cam="overview">
+    <p class="eyebrow reveal">De Jerusalén a Babilonia y regreso</p>
+    <h1 class="hero__title hero__title--2"><span class="line"><span>El destierro</span></span><span class="line"><span><em>y la vuelta</em></span></span></h1>
+    <p class="hero__sub reveal">¿Cómo cantar un cántico del Señor en tierra extranjera?</p>
+    <p class="hero__lema reveal">Un itinerario de fe en doce etapas</p>
+    <a class="hero__cue" href="#prologo"><span>Ponte en camino</span><i></i></a>
+  </section>
+
+  <!-- PRÓLOGO -->
+  <section class="prologo" id="prologo" data-cam="overview">
+    <div class="prologo__inner">
+      <p class="cap reveal"><span class="drop">E</span>l destierro a Babilonia es la noche más oscura de la historia de Israel. En el año 587 antes de Cristo cae Jerusalén, arde el templo y miles de personas son llevadas a cientos de kilómetros de su tierra. Durante casi cincuenta años viven como extranjeros junto a los ríos de Babilonia.</p>
+      <p class="reveal">Y, sin embargo, de esa noche sale un pueblo nuevo. En el destierro Israel descubre que Dios no está atado a un templo, que su Palabra basta, que el Espíritu puede devolver la vida a unos huesos secos. Por eso la Iglesia ha leído siempre el exilio como un tiempo de purificación y de esperanza.</p>
+      <p class="reveal">Es la historia hermana de «Babel o Jerusalén»: la gran Babilonia frente a la ciudad que se reconstruye entre todos.</p>
+      <p class="reveal muted">Doce etapas sobre el mapa: la ida siguiendo los ríos, la vida en Babilonia y la vuelta por el desierto. En cada una, un lugar, una palabra de la Escritura y una pregunta para quedarte un rato en silencio.</p>
+    </div>
+  </section>
+
+  <!-- ETAPA I -->
+  <section class="etapa etapa--firma" id="etapa-1" data-cam="station" data-station="0">
+    <div class="etapa__head etapa__head--sticky">
+      <span class="etapa__rn">I</span>
+      <p class="etapa__lugar">Jerusalén · La caída</p>
+      <p class="etapa__hint">Sigue bajando: Jerusalén arde</p>
+    </div>
+    <article class="panel">
+      <p class="panel__kicker">Etapa I · La ciudad en ruinas</p>
+      <h2 class="panel__title">¡Qué solitaria se encuentra la ciudad!</h2>
+      <p>Año 587 antes de Cristo. Tras un largo asedio, el ejército de Nabucodonosor, rey de Babilonia, entra en Jerusalén. Incendia el templo, el palacio y las casas, y derriba las murallas.</p>
+      <p>Se pierde todo lo que parecía indestructible: el templo donde habitaba el Nombre de Dios, el rey de la casa de David, la tierra prometida. Para Israel no es solo una derrota militar: es la noche de la fe.</p>
+      <p>Los profetas lo habían advertido. Jeremías gritaba en la puerta del templo que no bastaba con repetir «el templo del Señor» mientras se oprimía al extranjero, al huérfano y a la viuda. La ciudad no cayó por la fuerza de Babilonia, sino porque había dejado de escuchar.</p>
+      <blockquote class="cita">
+        <p>«¡Qué solitaria se encuentra la ciudad populosa! Ha quedado como una viuda la primera entre las naciones».</p>
+        <cite>Lamentaciones 1, 1</cite>
+      </blockquote>
+      <p class="eco">«No os fiéis de palabras engañosas, repitiendo: “Es el templo del Señor, el templo del Señor, el templo del Señor”». <cite>Jeremías 7, 4</cite></p>
+      <div class="pausa">
+        <p class="pausa__label">Para la oración</p>
+        <p class="pausa__q">¿En qué seguridades he puesto mi fe que no son Dios? ¿Qué se ha derrumbado en mi vida, y qué me está diciendo el Señor en esas ruinas?</p>
+      </div>
+      <div class="acciones">
+        <a class="btn" href="https://www.biblegateway.com/passage/?search=Lamentaciones+1&amp;version=BLP" target="_blank" rel="noopener">Leer Lamentaciones 1</a>
+        <button class="btn btn--ghost" data-share="1" type="button">Compartir por WhatsApp</button>
+      </div>
+    </article>
+  </section>
+
+  <div class="tramo" data-cam="travel"><p class="reveal">«Los caldeos incendiaron el templo, el palacio real y las casas de Jerusalén».<cite>2 Reyes 25, 9</cite></p></div>
+
+  <!-- ETAPA II -->
+  <section class="etapa" id="etapa-2" data-cam="station" data-station="1">
+    <div class="etapa__head">
+      <span class="etapa__rn">II</span>
+      <p class="etapa__lugar">Ribla · El camino del destierro</p>
+    </div>
+    <article class="panel">
+      <p class="panel__kicker">Etapa II · La deportación</p>
+      <h2 class="panel__title">Raquel llora por sus hijos</h2>
+      <p>El rey Sedecías es llevado ante Nabucodonosor, en Ribla, junto al río Orontes, y allí es juzgado sin piedad. Detrás, en largas columnas, caminan los deportados: sacerdotes, artesanos, familias enteras.</p>
+      <p>No cruzan el desierto. Suben hacia el norte y siguen el arco de la Media Luna Fértil, junto a los ríos, cientos de kilómetros a pie. Es el Éxodo al revés: de la tierra prometida a la esclavitud.</p>
+      <p>Jeremías pone voz a ese dolor con la imagen de Raquel, la madre de Israel, que llora desde su tumba por los hijos que se llevan. Pero en el mismo capítulo Dios le promete: volverán.</p>
+      <blockquote class="cita">
+        <p>«En Ramá se escucha un lamento, llanto amargo: Raquel que llora por sus hijos, y rehúsa ser consolada, porque ya no existen».</p>
+        <cite>Jeremías 31, 15</cite>
+      </blockquote>
+      <p class="eco">«Reprime tu voz del llanto y tus ojos de las lágrimas […]: volverán del país enemigo». <cite>Jeremías 31, 16</cite></p>
+      <div class="pausa">
+        <p class="pausa__label">Para la oración</p>
+        <p class="pausa__q">¿Qué llanto llevo dentro que todavía no he puesto delante de Dios? ¿A quién conozco que vive hoy desarraigado, lejos de su tierra?</p>
+      </div>
+      <div class="acciones">
+        <a class="btn" href="https://www.biblegateway.com/passage/?search=Jeremías+31%3A15-22&amp;version=BLP" target="_blank" rel="noopener">Leer Jeremías 31, 15-22</a>
+        <button class="btn btn--ghost" data-share="2" type="button">Compartir por WhatsApp</button>
+      </div>
+    </article>
+  </section>
+
+  <div class="tramo" data-cam="travel"><p class="reveal">«Desde lo hondo a ti grito, Señor; Señor, escucha mi voz».<cite>Salmo 130, 1-2</cite></p></div>
+
+  <!-- ETAPA III -->
+  <section class="etapa" id="etapa-3" data-cam="station" data-station="2">
+    <div class="etapa__head">
+      <span class="etapa__rn">III</span>
+      <p class="etapa__lugar">Babilonia · Junto a los canales</p>
+    </div>
+    <article class="panel">
+      <p class="panel__kicker">Etapa III · La nostalgia de Sion</p>
+      <h2 class="panel__title">¿Cómo cantar en tierra extranjera?</h2>
+      <p>Babilonia es la ciudad más grande del mundo: murallas inmensas, la puerta de Ishtar revestida de ladrillo azul y, en el centro, el gran zigurat, la torre escalonada del dios Marduk. Muchos estudiosos piensan que ese zigurat está detrás del relato de Babel.</p>
+      <p>Los deportados se sientan junto a los canales y cuelgan sus cítaras en los sauces. Sus captores les piden que canten los cantos de Sion, y no pueden.</p>
+      <p>El salmo 137 es una oración sin maquillaje: tristeza, nostalgia y hasta rabia. Dios no nos pide que finjamos. Nos deja rezar con la verdad de lo que sentimos.</p>
+      <blockquote class="cita">
+        <p>«Junto a los canales de Babilonia nos sentamos a llorar con nostalgia de Sion; en los sauces de sus orillas colgábamos nuestras cítaras. […] ¿Cómo cantar un cántico del Señor en tierra extranjera?».</p>
+        <cite>Salmo 137, 1-2.4</cite>
+      </blockquote>
+      <p class="eco">«Las lágrimas son mi pan noche y día, mientras todo el día me repiten: “¿Dónde está tu Dios?”». <cite>Salmo 42, 4</cite></p>
+      <div class="pausa">
+        <p class="pausa__label">Para la oración</p>
+        <p class="pausa__q">¿Cuál es hoy mi «tierra extranjera», el lugar donde me cuesta cantar? ¿Me atrevo a rezar con la verdad de lo que siento?</p>
+      </div>
+      <div class="acciones">
+        <a class="btn" href="https://www.biblegateway.com/passage/?search=Salmo+137&amp;version=BLP" target="_blank" rel="noopener">Leer Salmo 137</a>
+        <button class="btn btn--ghost" data-share="3" type="button">Compartir por WhatsApp</button>
+      </div>
+    </article>
+  </section>
+
+  <div class="tramo" data-cam="travel"><p class="reveal">«Si me olvido de ti, Jerusalén, que se me paralice la mano derecha».<cite>Salmo 137, 5</cite></p></div>
+
+  <!-- ETAPA IV -->
+  <section class="etapa" id="etapa-4" data-cam="station" data-station="3">
+    <div class="etapa__head">
+      <span class="etapa__rn">IV</span>
+      <p class="etapa__lugar">El río Quebar · Ezequiel</p>
+    </div>
+    <article class="panel">
+      <p class="panel__kicker">Etapa IV · La gloria de Dios en el destierro</p>
+      <h2 class="panel__title">Se abrieron los cielos</h2>
+      <p>Entre los deportados hay un joven sacerdote, Ezequiel. Vive en Tel Abib, junto al río Quebar, un canal cerca de Nipur. Sin templo, un sacerdote no tiene nada que hacer.</p>
+      <p>Y allí, en tierra pagana, se le abren los cielos. Ve la gloria del Señor sobre un carro con ruedas que van en todas direcciones. La gloria que habitaba en el templo se ha puesto en camino: ha salido de Jerusalén para acompañar a su pueblo.</p>
+      <p>Es la gran sorpresa del destierro: Dios no se ha quedado atrás. Está también aquí, junto al canal, entre los vencidos.</p>
+      <blockquote class="cita">
+        <p>«Estando yo entre los deportados, junto al río Quebar, se abrieron los cielos y contemplé visiones divinas».</p>
+        <cite>Ezequiel 1, 1</cite>
+      </blockquote>
+      <p class="eco">«Yo he sido para ellos un pequeño santuario en los países adonde fueron». <cite>Ezequiel 11, 16</cite></p>
+      <div class="pausa">
+        <p class="pausa__label">Para la oración</p>
+        <p class="pausa__q">¿Creo que Dios está también en mis destierros, en los lugares y los tiempos que yo no elegí? ¿Dónde lo he visto aparecer cuando no lo esperaba?</p>
+      </div>
+      <div class="acciones">
+        <a class="btn" href="https://www.biblegateway.com/passage/?search=Ezequiel+1%3A1-28&amp;version=BLP" target="_blank" rel="noopener">Leer Ezequiel 1</a>
+        <button class="btn btn--ghost" data-share="4" type="button">Compartir por WhatsApp</button>
+      </div>
+    </article>
+  </section>
+
+  <div class="tramo" data-cam="travel"><p class="reveal">«Donde está el Espíritu del Señor, hay libertad».<cite>2 Corintios 3, 17</cite></p></div>
+
+  <!-- ETAPA V -->
+  <section class="etapa" id="etapa-5" data-cam="station" data-station="4">
+    <div class="etapa__head">
+      <span class="etapa__rn">V</span>
+      <p class="etapa__lugar">Babilonia · La carta de Jeremías</p>
+    </div>
+    <article class="panel">
+      <p class="panel__kicker">Etapa V · Buscad la paz de la ciudad</p>
+      <h2 class="panel__title">Edificad casas y plantad huertos</h2>
+      <p>Desde Jerusalén, Jeremías escribe una carta a los deportados. Los falsos profetas les prometen que volverán enseguida. Jeremías les dice lo contrario: será largo, unos setenta años.</p>
+      <p>Y les da un encargo sorprendente: no vivan con las maletas hechas. Edifiquen casas, planten huertos, cásense, tengan hijos. Busquen el bien de la ciudad adonde han sido llevados y recen por ella, porque su bien será el de ellos.</p>
+      <p>El destierro no es un paréntesis perdido. También allí se puede vivir con dignidad, servir y esperar. Y detrás de todo hay un designio de paz.</p>
+      <blockquote class="cita">
+        <p>«Conozco mis designios sobre vosotros: designios de paz y no de aflicción, daros un porvenir y una esperanza».</p>
+        <cite>Jeremías 29, 11</cite>
+      </blockquote>
+      <p class="eco">«Buscad la prosperidad de la ciudad adonde os he deportado y rezad por ella al Señor, porque su prosperidad será la vuestra». <cite>Jeremías 29, 7</cite></p>
+      <div class="pausa">
+        <p class="pausa__label">Para la oración</p>
+        <p class="pausa__q">¿Rezo por mi ciudad y mi barrio, aunque no sean como yo quisiera? ¿Vivo esperando que todo cambie, o siembro ya donde estoy?</p>
+      </div>
+      <div class="acciones">
+        <a class="btn" href="https://www.biblegateway.com/passage/?search=Jeremías+29%3A1-14&amp;version=BLP" target="_blank" rel="noopener">Leer Jeremías 29, 1-14</a>
+        <button class="btn btn--ghost" data-share="5" type="button">Compartir por WhatsApp</button>
+      </div>
+    </article>
+  </section>
+
+  <div class="tramo" data-cam="travel"><p class="reveal">«Espera en el Señor, sé valiente, ten ánimo, espera en el Señor».<cite>Salmo 27, 14</cite></p></div>
+
+  <!-- ETAPA VI -->
+  <section class="etapa etapa--firma" id="etapa-6" data-cam="station" data-station="5">
+    <div class="etapa__head etapa__head--sticky">
+      <span class="etapa__rn">VI</span>
+      <p class="etapa__lugar">El valle de los huesos</p>
+      <p class="etapa__hint">Sigue bajando: el Espíritu sopla</p>
+    </div>
+    <article class="panel">
+      <p class="panel__kicker">Etapa VI · La esperanza muerta y el Espíritu</p>
+      <h2 class="panel__title">¿Podrán revivir estos huesos?</h2>
+      <p>Pasan los años y la esperanza se seca. Los deportados lo dicen así: «Nuestros huesos están secos, nuestra esperanza ha perecido».</p>
+      <p>Entonces Dios lleva a Ezequiel a un valle lleno de huesos y le pregunta: «¿Podrán revivir estos huesos?». El profeta profetiza, y los huesos se juntan, se cubren de carne… pero no tienen vida. Solo cuando sopla el Espíritu, desde los cuatro vientos, se ponen en pie.</p>
+      <p>No basta con reconstruir estructuras. Lo que da vida a un pueblo es el Espíritu de Dios. Es la misma promesa que se cumplirá en la Pascua y en Pentecostés.</p>
+      <blockquote class="cita">
+        <p>«Huesos secos, escuchad la palabra del Señor. Esto dice el Señor Dios a estos huesos: “Yo mismo traeré sobre vosotros espíritu, y viviréis”».</p>
+        <cite>Ezequiel 37, 4-5</cite>
+      </blockquote>
+      <p class="eco">«Os daré un corazón nuevo y os infundiré un espíritu nuevo». <cite>Ezequiel 36, 26</cite></p>
+      <div class="pausa">
+        <p class="pausa__label">Para la oración</p>
+        <p class="pausa__q">¿Qué está seco en mí, en mi familia o en mi comunidad? ¿Le pido al Espíritu que sople ahí, o ya lo doy por perdido?</p>
+      </div>
+      <div class="acciones">
+        <a class="btn" href="https://www.biblegateway.com/passage/?search=Ezequiel+37%3A1-14&amp;version=BLP" target="_blank" rel="noopener">Leer Ezequiel 37, 1-14</a>
+        <button class="btn btn--ghost" data-share="6" type="button">Compartir por WhatsApp</button>
+      </div>
+    </article>
+  </section>
+
+  <div class="tramo" data-cam="travel"><p class="reveal">«Lámpara es tu palabra para mis pasos, luz en mi sendero».<cite>Salmo 119, 105</cite></p></div>
+
+  <!-- ETAPA VII -->
+  <section class="etapa" id="etapa-7" data-cam="station" data-station="6">
+    <div class="etapa__head">
+      <span class="etapa__rn">VII</span>
+      <p class="etapa__lugar">Babilonia · Sin templo, la Palabra</p>
+    </div>
+    <article class="panel">
+      <p class="panel__kicker">Etapa VII · Un pueblo que recuerda</p>
+      <h2 class="panel__title">Escucha, Israel</h2>
+      <p>Sin templo, sin rey y sin tierra, Israel podría haber desaparecido, como tantos pueblos vencidos. No desapareció. En el destierro descubrió que le quedaba lo esencial: la Palabra de Dios.</p>
+      <p>Las familias se reúnen para escuchar y recordar. Se guardan el sábado y las tradiciones de los padres. Muchos estudiosos piensan que en estos años se recogen y ordenan buena parte de las Escrituras.</p>
+      <p>El destierro purifica la fe: ya no está atada a un edificio, sino al corazón y a la escucha. Es un anuncio de lo que Jesús dirá a la samaritana: llega la hora de adorar en espíritu y en verdad.</p>
+      <blockquote class="cita">
+        <p>«Escucha, Israel: El Señor es nuestro Dios, el Señor es uno solo. Amarás al Señor, tu Dios, con todo tu corazón, con toda tu alma y con todas tus fuerzas».</p>
+        <cite>Deuteronomio 6, 4-5</cite>
+      </blockquote>
+      <p class="eco">«Se seca la hierba, se marchita la flor, pero la palabra de nuestro Dios permanece por siempre». <cite>Isaías 40, 8</cite></p>
+      <div class="pausa">
+        <p class="pausa__label">Para la oración</p>
+        <p class="pausa__q">Cuando me faltan los apoyos de siempre, ¿qué me queda? ¿Qué lugar tiene la Palabra de Dios en mi casa?</p>
+      </div>
+      <div class="acciones">
+        <a class="btn" href="https://www.biblegateway.com/passage/?search=Deuteronomio+6%3A4-9&amp;version=BLP" target="_blank" rel="noopener">Leer Deuteronomio 6, 4-9</a>
+        <button class="btn btn--ghost" data-share="7" type="button">Compartir por WhatsApp</button>
+      </div>
+    </article>
+  </section>
+
+  <div class="tramo" data-cam="travel"><p class="reveal">«Al anochecer nos visita el llanto; por la mañana, el júbilo».<cite>Salmo 30, 6</cite></p></div>
+
+  <!-- ETAPA VIII -->
+  <section class="etapa" id="etapa-8" data-cam="station" data-station="7">
+    <div class="etapa__head">
+      <span class="etapa__rn">VIII</span>
+      <p class="etapa__lugar">Babilonia · Ciro</p>
+    </div>
+    <article class="panel">
+      <p class="panel__kicker">Etapa VIII · Dios escribe derecho</p>
+      <h2 class="panel__title">Mi ungido, un rey extranjero</h2>
+      <p>Año 539 antes de Cristo. Ciro, rey de los persas, entra en Babilonia casi sin combatir. El imperio que parecía eterno cae en una noche.</p>
+      <p>Al año siguiente Ciro publica un decreto: los pueblos deportados pueden volver a sus tierras y reconstruir sus templos. El profeta lo llama «ungido» del Señor, aunque Ciro no conoce al Dios de Israel.</p>
+      <p>Dios guía la historia también por caminos que no esperamos, y se sirve de quien menos pensamos para cumplir su promesa.</p>
+      <blockquote class="cita">
+        <p>«Así dice Ciro, rey de Persia: “El Señor, Dios del cielo, me ha entregado todos los reinos de la tierra y me ha encargado construirle un templo en Jerusalén de Judá”».</p>
+        <cite>Esdras 1, 2</cite>
+      </blockquote>
+      <p class="eco">«Así dice el Señor a su ungido, a Ciro, a quien he tomado de la mano». <cite>Isaías 45, 1</cite></p>
+      <div class="pausa">
+        <p class="pausa__label">Para la oración</p>
+        <p class="pausa__q">¿Sé reconocer la mano de Dios en personas y acontecimientos que no esperaba? ¿Qué «imperio» de mi vida creía eterno y Dios ha hecho caer para liberarme?</p>
+      </div>
+      <div class="acciones">
+        <a class="btn" href="https://www.biblegateway.com/passage/?search=Esdras+1&amp;version=BLP" target="_blank" rel="noopener">Leer Esdras 1</a>
+        <button class="btn btn--ghost" data-share="8" type="button">Compartir por WhatsApp</button>
+      </div>
+    </article>
+  </section>
+
+  <div class="tramo" data-cam="travel"><p class="reveal">«Los rescatados del Señor volverán, llegarán a Sion con cantos de júbilo».<cite>Isaías 35, 10</cite></p></div>
+
+  <!-- ETAPA IX -->
+  <section class="etapa" id="etapa-9" data-cam="station" data-station="8">
+    <div class="etapa__head">
+      <span class="etapa__rn">IX</span>
+      <p class="etapa__lugar">El desierto · El camino de vuelta</p>
+    </div>
+    <article class="panel">
+      <p class="panel__kicker">Etapa IX · Un nuevo éxodo</p>
+      <h2 class="panel__title">Consolad, consolad a mi pueblo</h2>
+      <p>Un profeta anónimo, el que llamamos Segundo Isaías, anuncia el final del destierro con las palabras más tiernas de la Biblia: consolad a mi pueblo, habladle al corazón.</p>
+      <p>La vuelta será un nuevo Éxodo. Si el primero cruzó el mar, este cruzará el desierto: Dios abrirá un camino recto, allanará los montes, hará brotar agua en el yermo.</p>
+      <p>Siglos después, Juan el Bautista se presentará como «la voz que grita en el desierto». El camino de vuelta definitivo lo abrirá Jesús.</p>
+      <blockquote class="cita">
+        <p>«Consolad, consolad a mi pueblo, dice vuestro Dios; hablad al corazón de Jerusalén. […] Una voz grita: “En el desierto preparadle un camino al Señor”».</p>
+        <cite>Isaías 40, 1-3</cite>
+      </blockquote>
+      <p class="eco">«Mirad que realizo algo nuevo; ya está brotando, ¿no lo notáis? Abriré un camino en el desierto, corrientes en el yermo». <cite>Isaías 43, 19</cite></p>
+      <div class="pausa">
+        <p class="pausa__label">Para la oración</p>
+        <p class="pausa__q">¿Qué camino quiere abrir Dios en mi desierto? ¿A quién puedo yo «hablar al corazón» y consolar esta semana?</p>
+      </div>
+      <div class="acciones">
+        <a class="btn" href="https://www.biblegateway.com/passage/?search=Isaías+40%3A1-11&amp;version=BLP" target="_blank" rel="noopener">Leer Isaías 40, 1-11</a>
+        <button class="btn btn--ghost" data-share="9" type="button">Compartir por WhatsApp</button>
+      </div>
+    </article>
+  </section>
+
+  <div class="tramo" data-cam="travel"><p class="reveal">«Al ir, iban llorando, llevando la semilla; al volver, vuelven cantando, trayendo sus gavillas».<cite>Salmo 126, 6</cite></p></div>
+
+  <!-- ETAPA X -->
+  <section class="etapa" id="etapa-10" data-cam="station" data-station="9">
+    <div class="etapa__head">
+      <span class="etapa__rn">X</span>
+      <p class="etapa__lugar">Jerusalén · El regreso</p>
+    </div>
+    <article class="panel">
+      <p class="panel__kicker">Etapa X · El altar y el templo</p>
+      <h2 class="panel__title">Nos parecía soñar</h2>
+      <p>No vuelven todos. Muchos se han acostumbrado a Babilonia. Un grupo, con Zorobabel y el sacerdote Josué, emprende el camino y encuentra Jerusalén en ruinas.</p>
+      <p>Lo primero que levantan no son casas ni murallas: es el altar. Después ponen los cimientos del templo. Los jóvenes gritan de alegría; los ancianos que habían visto el primer templo lloran a gritos. Nadie distingue el llanto de la alegría.</p>
+      <p>Volver no es regresar al pasado. Es empezar de nuevo, más pobres y más humildes, pero con Dios en el centro.</p>
+      <blockquote class="cita">
+        <p>«Muchos sacerdotes, levitas y cabezas de familia ancianos, que habían visto el primer templo, lloraban a gritos […], mientras otros muchos gritaban de alegría. Nadie podía distinguir los gritos de alegría del llanto».</p>
+        <cite>Esdras 3, 12-13</cite>
+      </blockquote>
+      <p class="eco">«Cuando el Señor hizo volver a los cautivos de Sion, nos parecía soñar: la boca se nos llenaba de risas, la lengua de cantares». <cite>Salmo 126, 1-2</cite></p>
+      <div class="pausa">
+        <p class="pausa__label">Para la oración</p>
+        <p class="pausa__q">¿Qué lloro y qué celebro de lo que Dios está reconstruyendo en mi vida? ¿Qué «altar» tendría que levantar primero?</p>
+      </div>
+      <div class="acciones">
+        <a class="btn" href="https://www.biblegateway.com/passage/?search=Esdras+3&amp;version=BLP" target="_blank" rel="noopener">Leer Esdras 3</a>
+        <button class="btn btn--ghost" data-share="10" type="button">Compartir por WhatsApp</button>
+      </div>
+    </article>
+  </section>
+
+  <div class="tramo" data-cam="travel"><p class="reveal">«Tus palabras eran mi gozo y la alegría de mi corazón».<cite>Jeremías 15, 16</cite></p></div>
+
+  <!-- ETAPA XI -->
+  <section class="etapa" id="etapa-11" data-cam="station" data-station="10">
+    <div class="etapa__head">
+      <span class="etapa__rn">XI</span>
+      <p class="etapa__lugar">Jerusalén · Esdras lee la Ley</p>
+    </div>
+    <article class="panel">
+      <p class="panel__kicker">Etapa XI · La Palabra que reconstruye</p>
+      <h2 class="panel__title">La alegría del Señor es vuestra fuerza</h2>
+      <p>Esdras, sacerdote y escriba, llega de Babilonia con el libro de la Ley. Todo el pueblo, hombres, mujeres y niños que ya podían entender, se reúne en la plaza ante la Puerta del Agua.</p>
+      <p>Esdras lee desde el amanecer hasta el mediodía, y los levitas explican el sentido para que todos comprendan. El pueblo llora al escuchar. Pero Esdras y Nehemías les dicen: hoy es día de fiesta; comed, bebed y compartid con quien no tiene.</p>
+      <p>Es la primera «liturgia de la Palabra»: escuchar juntos, comprender, convertirse y celebrar compartiendo.</p>
+      <blockquote class="cita">
+        <p>«No estéis tristes: la alegría del Señor es vuestra fortaleza».</p>
+        <cite>Nehemías 8, 10</cite>
+      </blockquote>
+      <p class="eco">«Leían el libro de la ley de Dios con claridad y explicando su sentido, de modo que comprendieran la lectura». <cite>Nehemías 8, 8</cite></p>
+      <div class="pausa">
+        <p class="pausa__label">Para la oración</p>
+        <p class="pausa__q">¿Escucho la Palabra con la comunidad o solo por mi cuenta? ¿Con quién puedo compartir mi fiesta esta semana?</p>
+      </div>
+      <div class="acciones">
+        <a class="btn" href="https://www.biblegateway.com/passage/?search=Nehemías+8%3A1-12&amp;version=BLP" target="_blank" rel="noopener">Leer Nehemías 8, 1-12</a>
+        <button class="btn btn--ghost" data-share="11" type="button">Compartir por WhatsApp</button>
+      </div>
+    </article>
+  </section>
+
+  <div class="tramo" data-cam="travel"><p class="reveal">«Vosotros también, como piedras vivas, entráis en la construcción de una casa espiritual».<cite>1 Pedro 2, 5</cite></p></div>
+
+  <!-- ETAPA XII -->
+  <section class="etapa etapa--firma" id="etapa-12" data-cam="station" data-station="11">
+    <div class="etapa__head etapa__head--sticky">
+      <span class="etapa__rn">XII</span>
+      <p class="etapa__lugar">Jerusalén · Nehemías</p>
+      <p class="etapa__hint">Sigue bajando: la muralla se levanta</p>
+    </div>
+    <article class="panel">
+      <p class="panel__kicker">Etapa XII · Reconstruir juntos</p>
+      <h2 class="panel__title">¡Levantémonos y construyamos!</h2>
+      <p>En Susa, la capital persa, el copero del rey Artajerjes, Nehemías, se entera de que la muralla de Jerusalén sigue en ruinas. Llora, ayuna y reza. Después pide permiso al rey y se pone en camino.</p>
+      <p>En Jerusalén recorre de noche las ruinas, convoca al pueblo y reparte el trabajo: cada familia levanta el tramo que tiene delante de su casa. Con una mano trabajan y con la otra sostienen el arma frente a quienes se burlan y amenazan. La muralla se termina en cincuenta y dos días.</p>
+      <p>Es la imagen que el papa León XIV ha elegido para la encíclica <em>Magnifica humanitas</em>: frente a Babel, reconstruir Jerusalén entre todos, sin imponer desde arriba.</p>
+      <blockquote class="cita">
+        <p>«¡Levantémonos y construyamos!».</p>
+        <cite>Nehemías 2, 18</cite>
+      </blockquote>
+      <p class="eco">«Si el Señor no construye la casa, en vano se cansan los albañiles». <cite>Salmo 127, 1</cite></p>
+      <div class="pausa">
+        <p class="pausa__label">Para la oración</p>
+        <p class="pausa__q">¿Cuál es «mi tramo» de muralla, lo que me toca reconstruir delante de mi casa? ¿Con quién lo hago?</p>
+      </div>
+      <div class="acciones">
+        <a class="btn" href="https://www.biblegateway.com/passage/?search=Nehemías+2%3A11-20&amp;version=BLP" target="_blank" rel="noopener">Leer Nehemías 2, 11-20</a>
+        <button class="btn btn--ghost" data-share="12" type="button">Compartir por WhatsApp</button>
+      </div>
+    </article>
+  </section>
+
+  <!-- FINAL -->
+  <section class="final" id="final" data-cam="end">
+    <div class="final__inner">
+      <p class="eyebrow reveal">Y ahora, tú</p>
+      <h2 class="final__title reveal">Volver a casa</h2>
+      <p class="reveal">El destierro no fue el final de Israel, sino su purificación. Allí aprendió que Dios camina con su pueblo, que su Palabra no se puede deportar y que solo su Espíritu devuelve la vida. Y desde allí volvió, más pobre y más libre, a reconstruir la ciudad.</p>
+      <p class="reveal">Todos conocemos destierros: una enfermedad, un duelo, una crisis, un país que no es el nuestro, una fe que se ha quedado seca. El camino de vuelta no lo hacemos solos. El Señor lo abre en el desierto, y en Cristo lo ha recorrido entero por nosotros.</p>
+      <p class="final__pregunta reveal">¿Dónde está hoy tu Babilonia? ¿Qué tramo de muralla te toca levantar?</p>
+      <blockquote class="cita cita--final reveal"><p>«Os recogeré de entre las naciones, os reuniré de todos los países y os llevaré a vuestra tierra. […] Os daré un corazón nuevo y os infundiré un espíritu nuevo».</p><cite>Ezequiel 36, 24.26</cite></blockquote>
+      <div class="acciones acciones--center">
+        <a class="btn btn--ghost" href="../babel-jerusalen/">Seguir con «Babel o Jerusalén»</a>
+      </div>
+      <figure class="final__mapa reveal">
+        <div class="mapa3d" id="mapa3d-wrap">
+          <canvas id="mapa3d-final" role="img" aria-label="Mapa 3D con el camino del destierro y la vuelta y las doce etapas. Arrastra para girarlo."></canvas>
+          <div class="mapa3d__labels" id="mapa3d-labels"></div>
+          <svg viewBox="0 0 200 200" class="mapa-svg mapa3d__fallback" role="img" aria-labelledby="mapa-t"><title id="mapa-t">Mapa ilustrado con las doce etapas</title><use href="#mapa"/></svg>
+          <p class="mapa3d__hint">Arrastra para girar · toca una etapa para ir a ella</p>
+        </div>
+        <div class="final__indices">
+          <p class="final__grp">I · El destierro</p>
+          <ol class="final__index">
+          <li><a href="#etapa-1"><span class="rn">I</span> <span class="nm">La caída</span><em>La ciudad en ruinas</em></a></li>
+          <li><a href="#etapa-2"><span class="rn">II</span> <span class="nm">La deportación</span><em>La deportación</em></a></li>
+          <li><a href="#etapa-3"><span class="rn">III</span> <span class="nm">Los ríos de Babilonia</span><em>La nostalgia de Sion</em></a></li>
+          </ol>
+          <p class="final__grp">II · En Babilonia</p>
+          <ol class="final__index">
+          <li><a href="#etapa-4"><span class="rn">IV</span> <span class="nm">Ezequiel</span><em>La gloria de Dios en el destierro</em></a></li>
+          <li><a href="#etapa-5"><span class="rn">V</span> <span class="nm">La carta</span><em>Buscad la paz de la ciudad</em></a></li>
+          <li><a href="#etapa-6"><span class="rn">VI</span> <span class="nm">Los huesos secos</span><em>La esperanza muerta y el Espíritu</em></a></li>
+          <li><a href="#etapa-7"><span class="rn">VII</span> <span class="nm">La Palabra</span><em>Un pueblo que recuerda</em></a></li>
+          <li><a href="#etapa-8"><span class="rn">VIII</span> <span class="nm">Ciro</span><em>Dios escribe derecho</em></a></li>
+          </ol>
+          <p class="final__grp">III · La vuelta</p>
+          <ol class="final__index">
+          <li><a href="#etapa-9"><span class="rn">IX</span> <span class="nm">Consolad</span><em>Un nuevo éxodo</em></a></li>
+          <li><a href="#etapa-10"><span class="rn">X</span> <span class="nm">El regreso</span><em>El altar y el templo</em></a></li>
+          <li><a href="#etapa-11"><span class="rn">XI</span> <span class="nm">Esdras</span><em>La Palabra que reconstruye</em></a></li>
+          <li><a href="#etapa-12"><span class="rn">XII</span> <span class="nm">Nehemías</span><em>Reconstruir juntos</em></a></li>
+          </ol>
+        </div>
+      </figure>
+      <div class="acciones acciones--center">
+        <button class="btn" data-share="0" type="button">Compartir el camino por WhatsApp</button>
+        <a class="btn btn--ghost" href="#inicio">Volver al inicio</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pie">
+  <p>Itinerario de reflexión personal sobre el exilio de Babilonia (587-538 a. C.) y el regreso. La ruta del mapa es orientativa: la ida sigue el arco de la Media Luna Fértil; la vuelta, el «camino en el desierto» de Isaías 40. Textos bíblicos: Sagrada Biblia, versión oficial de la Conferencia Episcopal Española.</p>
+</footer>
+
+<!-- Mapa ilustrado (SVG reutilizable: respaldo y mapa final). Coordenadas: x,z → ×10+100 -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="mapa" viewBox="0 0 200 200">
+      <rect width="200" height="200" fill="#e9dfcc"/>
+      <image id="mapa-img" x="0" y="0" width="200" height="200" href=""/>
+      <path id="ruta-svg" d="" stroke="#9b2a1c" stroke-width="1.6" stroke-dasharray="3 3" fill="none"/>
+      <g id="st-svg" font-family="Cormorant Garamond, Georgia, serif" font-size="8" font-weight="600" fill="#F2EBDD" text-anchor="middle"></g>
+    </symbol>
+  </defs>
+</svg>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
